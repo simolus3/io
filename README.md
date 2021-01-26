@@ -1,7 +1,7 @@
 Contains utilities for the Dart VM's `dart:io`.
 
 [![pub package](https://img.shields.io/pub/v/io.svg)](https://pub.dev/packages/io)
-[![ci](https://github.com/dart-lang/io/workflows/ci/badge.svg?branch=master)(https://github.com/dart-lang/io/actions?query=branch%3Amaster)]
+[![ci](https://github.com/dart-lang/io/workflows/ci/badge.svg?branch=master)](https://github.com/dart-lang/io/actions?query=branch%3Amaster)
 
 ## Usage - `io.dart`
 
