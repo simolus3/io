@@ -7,8 +7,7 @@ import 'dart:convert';
 import 'dart:io';
 
 // TODO: Change to io.dart once these features are published.
-import 'package:io/io.dart' hide sharedStdIn;
-import 'package:io/io.dart' as io;
+import 'package:io/io.dart';
 import 'package:path/path.dart' as p;
 import 'package:test/test.dart';
 
@@ -20,7 +19,8 @@ void main() {
   List<String> stderrLog;
 
   tearDownAll(() async {
-    await io.sharedStdIn.terminate();
+    await sharedStdIn.terminate();
+    await Future<void>.delayed(const Duration(seconds: 1));
   });
 
   test('spawn functions should match the type definition of Process.start', () {
