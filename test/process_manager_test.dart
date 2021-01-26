@@ -9,6 +9,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:io/io.dart' hide sharedStdIn;
+import 'package:io/io.dart' as io;
 import 'package:path/path.dart' as p;
 import 'package:test/test.dart';
 
@@ -18,6 +19,10 @@ void main() {
   SharedStdIn sharedStdIn;
   List<String> stdoutLog;
   List<String> stderrLog;
+
+  tearDownAll(() async {
+    await io.sharedStdIn.terminate();
+  });
 
   test('spawn functions should match the type definition of Process.start', () {
     const isStartProcess = TypeMatcher<StartProcess>();
